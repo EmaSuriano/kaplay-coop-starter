@@ -2,6 +2,8 @@
 
 The smallest working peer-to-peer coop game you can fork: a Vite + TypeScript template that puts two players on a Kaplay canvas, connected through Trystero over MQTT signaling and WebRTC. Host a room, share the link, walk around.
 
+**Demo:** [emasuriano.github.io/kaplay-coop-starter](https://emasuriano.github.io/kaplay-coop-starter/)
+
 ## Features
 
 - Room links — create a room, copy the URL, anyone with the link joins
@@ -40,6 +42,7 @@ WebRTC will not work from a `file://` URL. Always use the Vite dev server (or an
 
 ```
 .
+├── .github/workflows/  # CI on PRs, GitHub Pages deploy on main
 ├── index.html          # Lobby overlay + game canvas (stable element ids)
 ├── package.json        # Scripts and dependencies
 ├── tsconfig.json       # Strict TypeScript (noEmit, bundler resolution)
@@ -82,6 +85,16 @@ Edit these first:
 - **`src/style.css`** — overlay, HUD, and canvas look
 
 Leave `src/net.ts` alone unless you swap the Trystero strategy or signaling.
+
+## Deploy
+
+Pushes to `main` build the site and publish it to GitHub Pages:
+
+https://emasuriano.github.io/kaplay-coop-starter/
+
+The live origin is `https`, which WebRTC needs. GitHub Actions sets `VITE_BASE=/kaplay-coop-starter/` so asset URLs work on the project Pages path. Local `npm run dev` still uses `/`.
+
+First time (or after forking): repo **Settings → Pages → Source = GitHub Actions**. Forks should change `VITE_BASE` in `.github/workflows/pages.yml` to `/<their-repo-name>/`.
 
 ## License
 

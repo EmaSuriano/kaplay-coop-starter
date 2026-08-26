@@ -3,16 +3,8 @@
   "private": true,
   "type": "module",
   "description": "Vite + TypeScript starter for peer-to-peer coop games with Kaplay and Trystero (MQTT signaling).",
-  "keywords": [
-    "kaplay",
-    "trystero",
-    "webrtc",
-    "coop",
-    "multiplayer",
-    "vite",
-    "typescript",
-    "p2p"
-  ],
+  "homepage": "https://emasuriano.github.io/kaplay-coop-starter/",
+  "keywords": ["kaplay", "trystero", "webrtc", "coop", "multiplayer", "vite", "typescript", "p2p"],
   "license": "MIT",
   "scripts": {
     "dev": "vite",
