@@ -10,6 +10,7 @@ The smallest working peer-to-peer coop game you can fork: a Vite + TypeScript te
 - MQTT signaling via `@trystero-p2p/mqtt` (public brokers; no game server)
 - Position sync and a one-shot color handshake between peers
 - TypeScript + Vite, strict types, one-command local preview
+- Every pull request gets a live GitHub Pages URL at `/pr-preview/pr-N/`
 
 ## Quick start
 
@@ -42,7 +43,7 @@ WebRTC will not work from a `file://` URL. Always use the Vite dev server (or an
 
 ```
 .
-├── .github/workflows/  # CI on PRs, GitHub Pages deploy on main
+├── .github/workflows/  # CI on PRs, GitHub Pages deploy on main, PR preview deploys
 ├── index.html          # Lobby overlay + game canvas (stable element ids)
 ├── package.json        # Scripts and dependencies
 ├── tsconfig.json       # Strict TypeScript (noEmit, bundler resolution)
