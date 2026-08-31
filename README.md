@@ -13,6 +13,10 @@ The smallest working peer-to-peer coop game you can fork: a Vite + TypeScript te
 - Position sync and a one-shot color handshake between peers
 - TypeScript + Vite, strict types, one-command local preview
 - Every pull request gets a live GitHub Pages URL at `/pr-preview/pr-N/`
+- Supports many players in the room as well.
+
+
+![Multiple players](https://github.com/user-attachments/assets/e573da67-2d22-41d2-9bda-1365a72a361d)
 
 ## Quick start
 
