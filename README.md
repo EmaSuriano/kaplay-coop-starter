@@ -4,6 +4,8 @@ The smallest working peer-to-peer coop game you can fork: a Vite + TypeScript te
 
 **Demo:** [emasuriano.github.io/kaplay-coop-starter](https://emasuriano.github.io/kaplay-coop-starter/)
 
+![Demo](https://github.com/user-attachments/assets/cd174200-1f2b-42a9-8f94-e05c768f32f3)
+
 ## Features
 
 - Room links — create a room, copy the URL, anyone with the link joins
