@@ -119,6 +119,32 @@ export function startGame(
     for (const peerId of ids) greetPeer(peerId)
   }
 
+  function drawTag(p: ReturnType<typeof makePlayer>, label: string): void {
+    k.drawText({
+      text: label,
+      pos: k.vec2(p.pos.x + GRID / 2, p.pos.y - 8),
+      size: 12,
+      color: hexColor('#e7e9ee'),
+      anchor: 'center',
+    })
+  }
+
+  k.onDraw(() => {
+    k.drawText({
+      text: isHost ? 'HOST' : 'JOIN',
+      pos: k.vec2(WIDTH / 2, 16),
+      size: 18,
+      color: hexColor(isHost ? HOST_COLOR : JOIN_COLOR),
+      anchor: 'center',
+    })
+    drawTag(me, 'YOU')
+    let n = 2
+    for (const p of peers.values()) {
+      drawTag(p, 'P' + n)
+      n += 1
+    }
+  })
+
   let lastSent = 0
   k.onUpdate(() => {
     let dx = 0
